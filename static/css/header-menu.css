@@ -1,0 +1,133 @@
+.header {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 35px;
+    color: white;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color: black;
+    height: 80px;
+    margin: 0;
+}
+
+.header-flex {
+    display: flex;
+}
+
+.menu {
+    background-color: black;
+    width: 300px;
+    height: 0px;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.link-item {
+    text-decoration: none;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+.link-item:hover {
+    text-decoration: underline;
+}
+
+.open {
+    height: 400px;
+    border-bottom: 2px solid white;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+
+.z-index-logo {
+    z-index: 10000;
+}
+
+
+.header-logo {
+    margin-right: 40px;
+    margin-top: 10px;
+    width: 100px;
+    height: 70px;
+    background-image: url('../image/header.gif');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+
+.logo-menu {
+    margin-left: auto !important;
+    margin-right: 10px !important;
+}
+
+.header-null {
+    width: 100px;
+}
+
+.gradient-border {
+    margin-top: 14px;
+    --border-width: 3px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    background-color: black;
+    border-radius: var(--border-width);
+    margin-left: auto;
+    margin-right: auto;
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: calc(-1 * var(--border-width));
+        left: calc(-1 * var(--border-width));
+        z-index: -1;
+        width: calc(100% + var(--border-width) * 2);
+        height: calc(100% + var(--border-width) * 2);
+        background: linear-gradient(60deg,
+                hsl(224, 85%, 66%),
+                hsl(269, 85%, 66%),
+                hsl(314, 85%, 66%),
+                hsl(359, 85%, 66%),
+                hsl(44, 85%, 66%),
+                hsl(89, 85%, 66%),
+                hsl(134, 85%, 66%),
+                hsl(179, 85%, 66%));
+        background-size: 300% 300%;
+        background-position: 0 50%;
+        border-radius: calc(2 * var(--border-width));
+        animation: moveGradient 4s alternate infinite;
+    }
+}
+
+@keyframes moveGradient {
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.container-header {
+    position: relative;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}

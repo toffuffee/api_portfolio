@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAUNTER.img</title>
+    <link rel="icon" href="{{url_for('static', filename='image/icon.ico')}}">
+    <link rel="stylesheet" type="text/css"
+        href="{{url_for('static', filename='node_modules/lightbox2/dist/css/lightbox.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/header-menu.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/footer.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/images.css')}}">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container-header">
+            <div class="header-flex">
+                <div class="header-null"></div>
+                <div class="gradient-border">HAUNTER.img</div>
+                <div class="header-logo"></div>
+            </div>
+            <div class="menu">
+                <div class="header-logo logo-menu"></div>
+                <div class="links">
+                    <a href="/" class="link-item">HAUNTER.exe</a>
+                    <a href="/images" class="link-item">HAUNTER.img</a>
+                    <a href="/blog" class="link-item">HAUNTER.blog</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="elements-gride"></div>
+    </div>
+
+    <div class="footer">
+        <a href="/">
+            <div class="footer-logo"></div>
+        </a>
+    </div>
+</body>
+<script src="{{ url_for('static', filename='node_modules/jquery/dist/jquery.js') }}""></script>
+<script src=" {{ url_for('static', filename='node_modules/masonry-layout/dist/masonry.pkgd.js' ) }}""></script>
+<script src="{{ url_for('static', filename='node_modules/lightbox2/dist/js/lightbox.js') }}""></script>
+<script src=" {{ url_for('static', filename='js/header-menu.js' ) }}""></script>
+<script src=" {{ url_for('static', filename='js/images.js' ) }}""></script>
+
+</html>

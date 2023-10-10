@@ -1,0 +1,15 @@
+.footer {
+    height: 125px;
+}
+
+.footer-logo {
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    background-image: url('../image/logo.gif');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}

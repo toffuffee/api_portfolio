@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 800px;
+}
+
+.blog {
+    padding-top: 180px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.post {
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid white;
+    height: 200px;
+    width: 400px;
+}
+
+.post-redirect {
+    text-decoration: none;
+}
+
+.post-title {
+    font-size: 30px;
+    padding-top: 60px;
+}
+
+.post-subtitle {
+    font-size: 20px;
+}

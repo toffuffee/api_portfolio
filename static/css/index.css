@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+}
+
+.main-block {
+    padding-top: 180px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}
+
+.container-gif {
+    background-image: url("../image/logo.gif");
+    height: 500px;
+    width: 500px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.container-title {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    padding-top: 200px;
+}

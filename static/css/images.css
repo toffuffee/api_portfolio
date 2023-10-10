@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 75px;
+    max-width: 1200px;
+}
+
+.element-item {
+    cursor: zoom-in;
+    padding: 5px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.elements-gride {
+    margin: 0 auto;
+}
+
+.element-item:hover {
+    scale: 0.9;
+}
+
+.persent-size {
+    width: 19%;
+}
+
+.lightbox .lb-image {
+    border: none;
+    border-radius: 3px 3px 0px 0px;
+}
+
+.lb-data .lb-number {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+}
+
+.lb-data .lb-close {
+    opacity: 1;
+}
+
+.lb-dataContainer {
+    background-color: black;
+}
+

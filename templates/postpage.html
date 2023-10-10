@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="{{url_for('static', filename='image/icon.ico')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/header-menu.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/footer.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/postpage.css')}}">
+</head>
+<body>
+    <div class="header">
+        <div class="container-header">
+            <div class="header-flex">
+                <div class="header-null"></div>
+                <div class="gradient-border">HAUNTER.post</div>
+                <div class="header-logo"></div>
+            </div>
+            <div class="menu">
+                <div class="header-logo logo-menu"></div>
+                <div class="links">
+                    <a href="/" class="link-item">HAUNTER.exe</a>
+                    <a href="/images" class="link-item">HAUNTER.img</a>
+                    <a href="/blog" class="link-item">HAUNTER.blog</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="post">
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="/blog">
+            <div class="footer-logo"></div>
+        </a>
+    </div>
+</body>
+<script src=" {{ url_for('static', filename='js/header-menu.js' ) }}""></script>
+<script src=" {{ url_for('static', filename='js/postpage.js' ) }}""></script>
+</html>
