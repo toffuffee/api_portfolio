@@ -1,5 +1,8 @@
 from waitress import serve
+from api import Blog, Post
 import json
+
+blogPage = Blog()
 
 def render_template(template_name, context={}):
     html_str=""
@@ -7,29 +10,19 @@ def render_template(template_name, context={}):
         html_str=f.read()
         html_str=html_str.format(**context)
     return html_str
-
-# Формирование JSON объекта
-def json_get():
-    data = {
-        "1": 1,
-        "2": 2,
-    }
-    json_data = json.dumps(data)
-    result = bytes(json_data, 'utf-8')
-    return [result]
-
-
-def home(environ):
-    return render_template('templates/index.html', context={})
-
-def contact_us(environ):
-    return render_template('templates/contact.html', context={})
-
-def contact2(environ):
-    return render_template('templates/2.html', context={})
+ 
+def pageDisplay(environ, path, context={}):
+    return render_template(path, context)
 
 def app(environ, start_response):
     path= environ.get("PATH_INFO")
+    err = "404 Not found"
+    test = "test"
+    pages = {
+        '/test': pageDisplay(environ, 'templates/test.html', context={'test': test}),
+        '/': pageDisplay(environ, 'templates/index.html', context={}),
+        '/blog': pageDisplay(environ, 'templates/blog.html', context={}),
+    }
     # Подключение JS и CSS
     if path.startswith("/src/css/"):
         new_path = path.replace('/','',1)
@@ -53,25 +46,22 @@ def app(environ, start_response):
             return [b"404 Not Found css/js"]
         
     if path == "/":
-        page = home(environ)
-    elif path == "/contact":
-        page = contact_us(environ)
-    elif path == "/contact/2":
-        page = contact2(environ)
-
+        page = pages[path]
+    elif path == "/blog":
+        page = pages[path]
+    elif path == "/test":
+        page = pages[path]
     # Пример получение JSON
-    elif path == "/api/test":
-        page = json_get()
+    elif path == "/api/blog":
+        page = blogPage.posts_json()
         start_response(
             f"200 OK", [
             ("Content-type", "application/json"),
             ]
         )
         return page
-    
-
     else:
-        page = render_template('templates/404.html', context={"path":path})
+        page = render_template('templates/404.html', context={"err":err})
     page = page.encode("utf-8")
 
     start_response(
