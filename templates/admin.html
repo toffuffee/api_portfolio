@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Upload Form</title>
+    </head>
+
+    <body>
+        <form id="imageUploadForm" enctype="multipart/form-data">
+            <label for="imageInput">Выберите картинку:</label>
+            <input type="file" id="imageInput" name="image" accept="image/*">
+
+            <label for="imageName">Заголовок:</label>
+            <input type="text" id="imageName" name="image_name">
+
+            <label for="imageDesc">Описание:</label>
+            <textarea id="imageDesc" name="image_desc"></textarea>
+
+            <label for="imageCountry">Страна:</label>
+            <input type="text" id="imageCountry" name="image_country">
+
+            <button type="submit">Загрузить картинку</button>
+        </form>
+    </body>
+
+    </html>
+
+    <button class="exit">Выйти</button>
+</body>
+<script src="../src/js/admin.js"></script>
+<script src="../src/js/admin_upload.js"></script>
+
+</html>
