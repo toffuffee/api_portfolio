@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.image-container {
+    margin-top: 120px;
+    width: 80%;
+    max-width: 335px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    object-fit: scale-down;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    max-height: 600px;
+}
+
+.image-details {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+}
+
+.image-name,
+.image-desc,
+.image-country {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.image-name {
+    color: #333;
+    font-weight: bold;
+}
+
+.image-desc {
+    color: #555;
+}
+
+.image-country {
+    color: #777;
+}
+
+#themeToggleBtn {
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1px solid black;
+}
+
+body.dark-theme .image-container {
+    background-color: #0e0e0e;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+body:not(.dark-theme) .image-container {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+body.dark-theme .image-name {
+    color: white;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+body.dark-theme .image-desc {
+    color: white;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+body.dark-theme .image-country {
+    color: white;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+body.dark-theme {
+    background-color: #0e0e0e;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+body.dark-theme header {
+    background-color: black;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+body.dark-theme .social-icons a i {
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+body:not(.dark-theme) {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+body:not(.dark-theme) header {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+body:not(.dark-theme) .social-icons a i {
+    color: black;
+    transition: color 0.3s ease-in-out;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    background-color: black;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* Уменьшен верхний внутренний отступ */
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    border-bottom: 1px solid black;
+    /* Добавлен нулевой внешний отступ */
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    font-size: 24px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
