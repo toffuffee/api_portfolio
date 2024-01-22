@@ -1,29 +1,19 @@
 (function () {
     document.getElementById("themeToggleBtn").addEventListener("click", toggleTheme);
-
-    // Получаем текущую тему из куки
     const currentTheme = getCookie("theme");
     if (currentTheme === "dark") {
         document.body.classList.add("dark-theme");
     }
-
-    // Обновляем иконку в зависимости от текущей темы
     updateThemeIcon();
 
     function toggleTheme() {
-        // Добавляем/удаляем класс темы
         document.body.classList.toggle("dark-theme");
-
-        // Сохраняем текущую тему в куки
         const isDarkTheme = document.body.classList.contains("dark-theme");
         setCookie("theme", isDarkTheme ? "dark" : "light", 365);
-
-        // Обновляем иконку в зависимости от текущей темы
         updateThemeIcon();
     }
 
     function updateThemeIcon() {
-        // Заменяем иконку в зависимости от текущей темы
         const icon = document.getElementById("themeToggleBtn").querySelector("i");
         icon.classList.toggle("fa-sun", !document.body.classList.contains("dark-theme"));
         icon.classList.toggle("fa-moon", document.body.classList.contains("dark-theme"));

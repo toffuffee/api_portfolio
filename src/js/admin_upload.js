@@ -17,7 +17,7 @@
     });
 
     async function uploadImage(formData) {
-        const url = '/api/upload_image';  // Замените на ваш реальный URL
+        const url = '/api/upload_image';
 
         try {
             const response = await fetch(url, {
